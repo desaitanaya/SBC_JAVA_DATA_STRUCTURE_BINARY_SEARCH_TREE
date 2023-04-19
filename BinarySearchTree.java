@@ -60,6 +60,24 @@ public class BinarySearchTree {
 		}
 
 	}
+	
+	//Searching an element in Binary search tree
+	public Node searchNode(Node root, int data) {
+		if(root != null) {
+			//If element found in binary tree
+			if(root.data == data) {
+				return root;
+			}
+			else if(data < root.data) {
+				return searchNode(root.left, data);
+			}
+			else {
+				return searchNode(root.right, data);
+			}
+		}
+		return null;
+	}
+	
 
 	public static void main(String[] args) {
 		BinarySearchTree bt = new BinarySearchTree();
@@ -67,6 +85,7 @@ public class BinarySearchTree {
 		System.out.println();
 		System.out.println("BINARY SEARCH TREE");
 	
+		//Inserting the nodes in Binary Tree
 		bt.insert(56);
 		bt.insert(30);
 		bt.insert(22);
@@ -81,6 +100,20 @@ public class BinarySearchTree {
 		bt.insert(63);
 		bt.insert(67);
 
+		//Displaying the nodes
 		bt.display();
-	}
+		
+		System.out.println();
+		
+		Node node = bt.searchNode(bt.root, 63);
+		System.out.println("---------------------------------------------------------");
+		if(node!=null) {
+			System.out.println("Element " +node.data + " is present");
+		}
+		else {
+			System.out.println("Element is not present");
+		}
+		
+		}
+	
 }
