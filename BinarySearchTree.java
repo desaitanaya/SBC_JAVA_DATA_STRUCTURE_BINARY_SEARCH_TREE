@@ -69,7 +69,17 @@ public class BinarySearchTree {
 	
 		bt.insert(56);
 		bt.insert(30);
+		bt.insert(22);
+		bt.insert(40);
+		bt.insert(11);
+		bt.insert(3);
+		bt.insert(16);
 		bt.insert(70);
+		bt.insert(60);
+		bt.insert(95);
+		bt.insert(65);
+		bt.insert(63);
+		bt.insert(67);
 
 		bt.display();
 	}
